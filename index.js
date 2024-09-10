@@ -9,7 +9,7 @@ import { UserRouter } from "./routes/User.js";
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: ["https://joyboyurlshortner.netlify.app"], credentials: true }));
 app.use(cookieParser());
 app.use("/auth", UserRouter);
 // app.use('/url', UrlRouter);
